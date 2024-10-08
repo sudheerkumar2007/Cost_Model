@@ -14,7 +14,7 @@ st.markdown("<h1 style='text-align: center;'>Cost Model</h1>", unsafe_allow_html
 #st.title('Cost Model')
 
 # Input: Percentage Value (A)
-A = st.text_input("Enter Volume percentage allocation(%) :", "", key='A')
+A = st.text_input("Enter Volume percentage allocation (%) :", "", key='A')
 A_style = """
     <style>
     [data-testid="stTextInput"] > div:first-child {
@@ -25,7 +25,7 @@ A_style = """
 st.markdown(A_style, unsafe_allow_html=True)
 
 # Input: Wage Rate (B)
-B = st.text_input("Enter the wage rate($) :", "", key='B')
+B = st.text_input("Enter the wage rate ($) :", "", key='B')
 B_style = """
     <style>
     [data-testid="stTextInput"] > div:nth-child(2) {
