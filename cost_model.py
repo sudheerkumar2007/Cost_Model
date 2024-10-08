@@ -14,7 +14,7 @@ st.markdown("<h1 style='text-align: center;'>Cost Model</h1>", unsafe_allow_html
 #st.title('Cost Model')
 
 # Input: Percentage Value (A)
-A = st.text_input("Enter the percentage value :", "", key='A')
+A = st.text_input("Enter Volume percentage allocation(%) :", "", key='A')
 A_style = """
     <style>
     [data-testid="stTextInput"] > div:first-child {
@@ -25,7 +25,7 @@ A_style = """
 st.markdown(A_style, unsafe_allow_html=True)
 
 # Input: Wage Rate (B)
-B = st.text_input("Enter the wage rate :", "", key='B')
+B = st.text_input("Enter the wage rate($) :", "", key='B')
 B_style = """
     <style>
     [data-testid="stTextInput"] > div:nth-child(2) {
@@ -36,7 +36,7 @@ B_style = """
 st.markdown(B_style, unsafe_allow_html=True)
 
 # Input: Process Rate (C)
-C = st.text_input("Enter the process rate :", "", key='C')
+C = st.text_input("Enter the process rate:", "", key='C')
 C_style = """
     <style>
     [data-testid="stTextInput"] > div:nth-child(3) {
@@ -57,7 +57,7 @@ if st.button('Calculate'):
             B = float(B)
             C = float(C)
             D = (B / C) * (A / 100)
-            st.write(f"Cost per unit : {D:.2f}")
+            st.write(f"Cost per unit: ${D:.2f}")
         except ValueError:
             st.write("Please enter valid numeric values for A, B, and C.")
     else:
